@@ -4,29 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Co-working space</title>
-    <link rel="stylesheet" href="style.css" />
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro" rel="stylesheet">
   </head>
-  <body>
-    <header class="header">
-      <h2><span>Space</span>Spot</h2>
-      <nav class="navigation">
-        <ul class="navbar">
-          <li class="nav">Home</li>
-          <li class="nav">About Us</li>
-          <li class="nav">Spaces</li>
-          <li class="nav">Blog</li>
-          <li class="nav">Locations</li>
-        </ul>
+  <body >
+    <div class="box-border scroll-smooth bg-black">
+  <div >
+    <header class="  relative flex items-center justify-between text-white mx-auto p-6 border-b border-b-grey">
+      <h2 class="text-white  font-source text-xl font-bold flex-shrink-0 ">
+        <span class="text-orange">Space</span>Spot
+      </h2>
+      <nav class="hidden font-source font-light justify-center text-white text-sm md:flex space-between">
+        <div class="space-x-6">
+          <a class="nav">Home</a>
+          <a class="nav">About Us</a>
+          <a class="nav">Spaces</a>
+          <a  class="nav">Blog</a>
+          <a class="nav">Locations</a>
+        </div>
       </nav>
-      <button class="contact">Contact Us</button>
+      <button class="justify-self-end px-6 py-1 bg-orange">Contact Us</button>
     </header>
     <main>
-      <div>
-        <div>
-          <h1>Your team's <br /><span>perfect WORK space</span></h1>
+      <div class="container flex flex-col items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row">
+        <div  class="flex flex-start flex-col space-y-12 md:w-1/2">
+          <h1 class="text-white font-bold text-8xl leading-relaxed uppercase">Your team's <br /><span class="text-orange">perfect WORK space</span>
+          </h1>
         </div>
-        <div>
-          <p>
+        <div class="w-1/2">
+          <p class="text-white">
             Discover Your Ideal Workspace Now! Elevate productivity and
             collaboration with tailored workspaces designed for success. Find
             yours today.
@@ -44,6 +54,7 @@
         <img src="" alt="">
       </div>
     </main>
+  </div>
     <section>
       <div>
         <div>
@@ -215,5 +226,6 @@
     </div>
     <p>SpaceSpot. All rights reserved-2023. Designed by The_Mauteen.</p>
     </footer>
+  </div>
   </body>
 </html>
