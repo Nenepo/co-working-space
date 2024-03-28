@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.wrapper .tabs-box{
+  scroll-behavior: smooth;
+}
+.tabs-box.dragging{
+  scroll-behavior: auto;
+  cursor: grab;
+}
+
+.tabs-box .tab.active {
+  color: #fff;
+  background: #ff7a32;
+  border-color: transparent;
+}

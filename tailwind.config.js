@@ -22,6 +22,7 @@ module.exports = {
      },
 
      fontSize:{
+      'sm': '0.88rem',
       'xl': '1.25rem',
       '2xl': '28px',
       '3xl': '1.8rem',
@@ -33,15 +34,19 @@ module.exports = {
      },
      borderRadius: {
       'oval': '100%',
-      'full': '50%'
-      
+      'full': '50%',
+      'lg': '8px',
+      'sm': '2px',
+      'md': '6px'
      },
     
     gridTemplateRows: {
       'auto' : 'repeat(6, 100px)'
     }
   },
-  plugins: [],
+  plugins: [
+  
+  ],
  
 }
 
