@@ -13,6 +13,10 @@
       href="https://fonts.googleapis.com/css2?family=Source+Code+Pro"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body class="scroll-smooth overflow-x-hidden">
     <div class="box-border bg-black">
@@ -302,22 +306,27 @@
         </div>
       </section>
       <!-- slider works -->
-      <section class="bg-black h-screen px-10 md:px-20  lg:h-[110vh]">
+      <section class="bg-black h-screen px-10 md:px-20 lg:h-[110vh]">
         <h2 class="text-orange text-2xl text-center font-bold pt-10">
           <span class="text-white">Our</span> Work Spaces
         </h2>
         <p class="text-center text-grey text-sm">
           Discover a variety of office spaces we offer
         </p>
-        <div class="wrapper mt-4 bg-white px-10 py-8 overflow-x-hidden max-w-2xl rounded-lg relative">
-          <div class="icon absolute w-20 flex  " style="left: 5px;">
-            <img id="left" src="../img/assets/angle-left-solid.svg" alt="left" class="w-8 h-8 p-2     cursor-pointer rounded-full bg-[#d8d5f2]">
+        <div
+          class="wrapper mt-4 bg-white px-10 py-8 overflow-x-hidden max-w-2xl rounded-lg relative mx-auto"
+        >
+          <div class="icon absolute w-20 flex" style="left: 5px">
+            <img
+              id="left"
+              src="../img/assets/angle-left-solid.svg"
+              alt="left"
+              class="w-8 h-8 p-2 cursor-pointer rounded-full bg-[#d8d5f2]"
+            />
           </div>
-           
-      
+
           <ul
-            class="tabs-box   text-grey gap-4 list-none  text-[12px] flex justify-between overflow-x-hidden text-nowrap "
-            
+            class="tabs-box text-grey gap-4 list-none text-[12px] flex justify-between overflow-x-hidden text-nowrap"
           >
             <li
               class="tab cursor-pointer whitespace-nowrap px-6 py-3 rounded-md border bg-black border-gray-500 select-none hover:bg-orange hover:text-white active:bg-orange active:text-white"
@@ -325,36 +334,41 @@
               Private Work Space
             </li>
             <li
-              class="tab cursor-pointer whitespace-nowrap bg-black px-6 py-3 rounded-md border border-gray-500 select-none  hover:bg-orange hover:text-white active:bg-orange active:text-white"
+              class="tab cursor-pointer whitespace-nowrap bg-black px-6 py-3 rounded-md border border-gray-500 select-none hover:bg-orange hover:text-white active:bg-orange active:text-white"
             >
               Public Work Space
             </li>
             <li
-              class="tab cursor-pointer whitespace-nowrap bg-black px-6 py-3 rounded-md border border-gray-500 select-none  hover:bg-orange hover:text-white active:bg-orange active:text-white"
+              class="tab cursor-pointer whitespace-nowrap bg-black px-6 py-3 rounded-md border border-gray-500 select-none hover:bg-orange hover:text-white active:bg-orange active:text-white"
             >
               Meeting Space
             </li>
             <li
-              class="tab cursor-pointer whitespace-nowrap bg-black px-6 py-3 rounded-md border border-gray-500 select-none  hover:bg-orange hover:text-white active:bg-orange active:text-white"
+              class="tab cursor-pointer whitespace-nowrap bg-black px-6 py-3 rounded-md border border-gray-500 select-none hover:bg-orange hover:text-white active:bg-orange active:text-white"
             >
               Conference Space
             </li>
             <li
-              class="tab cursor-pointer whitespace-nowrap bg-black px-6 py-3 rounded-md border border-gray-500 select-none  hover:bg-orange hover:text-white active:bg-orange active:text-white"
+              class="tab cursor-pointer whitespace-nowrap bg-black px-6 py-3 rounded-md border border-gray-500 select-none hover:bg-orange hover:text-white active:bg-orange active:text-white"
             >
               Lounge Space
             </li>
           </ul>
-          <div class="icon absolute w-20  right-0 flex justify-end mt-[-40px]" >
-            <img id="right" src="../img/assets/angle-right-solid.svg" alt="right" class="w-8 h-8 p-2  cursor-pointer rounded-full bg-[#d8d5f2]">
+          <div class="icon absolute w-20 right-1 flex justify-end mt-[-40px]">
+            <img
+              id="right"
+              src="../img/assets/angle-right-solid.svg"
+              alt="right"
+              class="w-8 h-8 p-2 cursor-pointer rounded-full bg-[#d8d5f2]"
+            />
           </div>
         </div>
         <div class="flex pt-16 space-x-6">
-          <div >
+          <div>
             <img src="./img/rectangle-1.png" alt="Co-working space" />
           </div>
-          <div ><img src="./img/rectangle-2.png" alt="Co-working space" /></div>
-          <div ><img src="./img/rectangle-3.png" alt="Co-working space" /></div>
+          <div><img src="./img/rectangle-2.png" alt="Co-working space" /></div>
+          <div><img src="./img/rectangle-3.png" alt="Co-working space" /></div>
         </div>
       </section>
       <section class="h-full bg-off-white md:px-20 lg:h-screen">
@@ -366,18 +380,27 @@
         </p>
         <div class="flex justify-between pt-10 px-8">
           <div class="flex items-center">
-            <h4 class="font-bold ">
-              Work Spaces in        
+            <h4 class="font-bold">
+              Work Spaces in
               <!-- function -->
-              <span class="text-orange text-xl ml-4"> Lagos </span>
-             
-             
+              <!-- id="locationName"  -->
+              <span class="text-orange text-xl">Lagos </span>
             </h4>
-             <!-- function -->
-             <div id="toggle" class="mt-2"> <img src="../img/assets/angle-right-solid (1).svg" class="w-4 h-4" alt="click to open">
-              <img src="../img/assets/angle-down-solid.svg" alt="click to close" class="w-4 h-4 hidden ">
-              </div>
-           
+            <!-- function -->
+            <div id="toggle" class="pt-1 cursor-pointer">
+              <img
+                id="arrowUp"
+                src="../img/assets/angle-right-solid (1).svg"
+                class="w-4 h-4"
+                alt="click to open"
+              />
+              <img
+                id="arrowDown"
+                src="../img/assets/angle-down-solid.svg"
+                alt="click to close"
+                class="w-4 h-4 hidden"
+              />
+            </div>
           </div>
           <!-- function -->
           <div>
@@ -434,76 +457,111 @@
           </div>
         </div>
       </section>
-      <section class="h-full bg-black">
+      <section class="h-[130vh] bg-black lg:h-full">
         <h2 class="font-bold text-3xl text-center pt-14 text-white">
           What Our Customers Say <br />
           About <span class="text-orange">SpaceSpot</span>
         </h2>
         <!-- carousel -->
-        <div class="flex pt-6 px-20 space-x-6 overflow-x-hidden">
-          <div class="bg-off-white p-7">
-            <p class="text-[12px] text-center">
-              SpaceSpot has been a game-changer for our startup. Finding the
-              right office space was a daunting task, but this platform made it
-              incredibly simple. The interface is user-friendly, making it easy
-              to browse through available options.
-            </p>
-            <div class="flex space-x-2 pt-4">
-              <img
-                class="rounded-full w-10 h-10"
-                src="./img/gig image.webp"
-                alt=""
-              />
+        <div class="px-20 pt-10 relative">
+         
+           
+         
+          <div class="swiper h-[25rem] lg:w-[30rem] mx-auto my-0 ">
+            <img
+            id="left"
+            src="../img/assets/angle-left-solid.svg"
+            alt="left"
+            class="swiper-button-prev p-2 cursor-pointer rounded-full bg-[#d8d5f2]"
+          />
+            <div class="swiper-wrapper">
+              <div
+                class="swiper-slide h-[14rem] w-[18rem] bg-off-white py-8 px-4 rounded-md shadow-lg shadow-black flex  items-center"
+              >
+                <p class="text-[12px]">
+                  SpaceSpot has been a game-changer for our startup. Finding the
+                  right office space was a daunting task, but this platform made
+                  it incredibly simple. The interface is user-friendly, making
+                  it easy to browse through available options.
+                </p>
+                <div class="flex space-x-2 pt-4">
+                  <img
+                    class="rounded-full w-10 h-10"
+                    src="./img/gig image.webp"
+                    alt=""
+                  />
 
-              <div>
-                <p class="font-bold">Mauteen Adeleke</p>
-                <p class="opacity-75 text-[12px]">CEO & Founder of 10Xvest</p>
+                  <div>
+                    <p class="font-bold">Mauteen Adeleke</p>
+                    <p class="opacity-75 text-[12px]">
+                      CEO & Founder of 10Xvest
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide h-[14rem] w-[18rem] bg-off-white py-8 px-4 rounded-md shadow-lg shadow-black flex  items-center"
+              >
+                <p class="text-[12px]">
+                  SpaceSpot has been a game-changer for our startup. Finding the
+                  right office space was a daunting task, but this platform made
+                  it incredibly simple. The interface is user-friendly, making
+                  it easy to browse through available options.
+                </p>
+                <div class="flex space-x-2 pt-4">
+                  <img
+                    class="rounded-full w-10 h-10"
+                    src="./img/gig image.webp"
+                    alt=""
+                  />
+
+                  <div>
+                    <p class="font-bold">Mauteen Adeleke</p>
+                    <p class="opacity-75 text-[12px]">
+                      CEO & Founder of 10Xvest
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="swiper-slide h-[14rem] w-[18rem]  bg-off-white py-8 px-4 rounded-md shadow-lg shadow-black flex items-center"
+              >
+                <p class="text-[12px]">
+                  SpaceSpot has been a game-changer for our startup. Finding the
+                  right office space was a daunting task, but this platform made
+                  it incredibly simple. The interface is user-friendly, making
+                  it easy to browse through available options.
+                </p>
+                <div class="flex space-x-2 pt-4">
+                  <img
+                    class="rounded-full w-10 h-10"
+                    src="./img/gig image.webp"
+                    alt=""
+                  />
+
+                  <div>
+                    <p class="font-bold">Mauteen Adeleke</p>
+                    <p class="opacity-75 text-[12px]">
+                      CEO & Founder of 10Xvest
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
+            <img
+            id="right"
+            src="../img/assets/angle-right-solid.svg"
+            alt="right"
+            class="swiper-button-next p-2 cursor-pointer rounded-full bg-[#d8d5f2] "
+          />
           </div>
-          <div class="bg-off-white p-7">
-            <p class="text-[12px] text-center">
-              SpaceSpot has been a game-changer for our startup. Finding the
-              right office space was a daunting task, but this platform made it
-              incredibly simple. The interface is user-friendly, making it easy
-              to browse through available options.
-            </p>
-            <div class="flex space-x-2 pt-4">
-              <img
-                class="rounded-full w-10 h-10"
-                src="./img/gig image.webp"
-                alt=""
-              />
-
-              <div>
-                <p class="font-bold">Mauteen Adeleke</p>
-                <p class="opacity-75 text-[12px]">CEO & Founder of 10Xvest</p>
-              </div>
-            </div>
-          </div>
-          <div class="bg-off-white p-7">
-            <p class="text-[12px] text-center">
-              SpaceSpot has been a game-changer for our startup. Finding the
-              right office space was a daunting task, but this platform made it
-              incredibly simple. The interface is user-friendly, making it easy
-              to browse through available options.
-            </p>
-            <div class="flex space-x-2 pt-4">
-              <img
-                class="rounded-full w-10 h-10"
-                src="./img/gig image.webp"
-                alt=""
-              />
-
-              <div>
-                <p class="font-bold">Mauteen Adeleke</p>
-                <p class="opacity-75 text-[12px]">CEO & Founder of 10Xvest</p>
-              </div>
-            </div>
-          </div>
-          <div class="slider-stuff"></div>
+         
+           
+         
+          <div class="swiper-pagination"></div>
         </div>
-        <div class="pt-28">
+
+        <div class="pt-10 lg:pt-28">
           <h2 class="text-white font-bold text-xl text-center">
             Level Up Your Team's Game with the <br />
             <span class="text-orange">Perfect Workspace</span>
@@ -530,7 +588,7 @@
             <h4 class="text-black font-bold text-2xl">
               Space<span class="text-orange">Spot</span>
             </h4>
-            <p class="opacity-75 text-lg">
+            <p class="opacity-75 text-lg md:w-[300px]">
               Discover Your Ideal Workspace Now! Elevate productivity and
               collaboration with tailored workspaces designed for success.
             </p>
@@ -603,6 +661,7 @@
         </div>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
