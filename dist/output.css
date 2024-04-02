@@ -578,6 +578,10 @@ video {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -592,6 +596,18 @@ video {
 
 .right-1 {
   right: 0.25rem;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .col-start-2 {
@@ -631,14 +647,14 @@ video {
   margin-right: auto;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .my-0 {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .-mt-4 {
@@ -677,6 +693,10 @@ video {
   margin-top: -40px;
 }
 
+.ml-4 {
+  margin-left: 1rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -713,10 +733,6 @@ video {
   height: 2rem;
 }
 
-.h-\[130vh\] {
-  height: 130vh;
-}
-
 .h-\[14rem\] {
   height: 14rem;
 }
@@ -735,10 +751,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-screen {
-  height: 100vh;
 }
 
 .w-10 {
@@ -761,6 +773,10 @@ video {
   width: 2rem;
 }
 
+.w-80 {
+  width: 20rem;
+}
+
 .w-\[18rem\] {
   width: 18rem;
 }
@@ -777,12 +793,16 @@ video {
   width: 100%;
 }
 
-.w-3 {
-  width: 0.75rem;
+.w-11\/12 {
+  width: 91.666667%;
 }
 
 .max-w-2xl {
   max-width: 42rem;
+}
+
+.max-w-80 {
+  max-width: 20rem;
 }
 
 .flex-shrink-0 {
@@ -888,6 +908,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .overflow-x-hidden {
@@ -1051,6 +1075,11 @@ video {
   padding-bottom: 2rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1103,8 +1132,12 @@ video {
   padding-top: 1.5rem;
 }
 
-.pt-72 {
-  padding-top: 18rem;
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -1203,6 +1236,14 @@ video {
   opacity: 0.75;
 }
 
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
 .shadow-2xl {
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
@@ -1224,6 +1265,11 @@ video {
 .shadow-black {
   --tw-shadow-color: #0C0E12;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .transition {
@@ -1252,9 +1298,9 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 ::-webkit-scrollbar {
   width: 1rem;
@@ -1300,12 +1346,14 @@ html {
 }
  */
 
-.placeholder\:text-grey::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.50);
+.placeholder\:text-white::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.placeholder\:text-grey::placeholder {
-  color: rgba(255, 255, 255, 0.50);
+.placeholder\:text-white::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:scale-110:hover {
@@ -1386,6 +1434,10 @@ html {
     height: 4rem;
   }
 
+  .md\:h-\[110\%\] {
+    height: 110%;
+  }
+
   .md\:h-\[46px\] {
     height: 46px;
   }
@@ -1408,6 +1460,10 @@ html {
 
   .md\:w-\[80px\] {
     width: 80px;
+  }
+
+  .md\:max-w-md {
+    max-width: 28rem;
   }
 
   .md\:grid-cols-2 {
@@ -1451,6 +1507,10 @@ html {
     padding-right: 5rem;
   }
 
+  .md\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
   .md\:pt-0 {
     padding-top: 0px;
   }
@@ -1465,40 +1525,8 @@ html {
 }
 
 @media (min-width: 1024px) {
-  .lg\:left-10 {
-    left: 2.5rem;
-  }
-
   .lg\:-mt-10 {
     margin-top: -2.5rem;
-  }
-
-  .lg\:ml-\[-100px\] {
-    margin-left: -100px;
-  }
-
-  .lg\:ml-\[-10rem\] {
-    margin-left: -10rem;
-  }
-
-  .lg\:mr-\[-10rem\] {
-    margin-right: -10rem;
-  }
-
-  .lg\:ml-\[10rem\] {
-    margin-left: 10rem;
-  }
-
-  .lg\:ml-\[-50rem\] {
-    margin-left: -50rem;
-  }
-
-  .lg\:ml-\[-80rem\] {
-    margin-left: -80rem;
-  }
-
-  .lg\:h-\[110vh\] {
-    height: 110vh;
   }
 
   .lg\:h-full {
@@ -1507,10 +1535,6 @@ html {
 
   .lg\:h-screen {
     height: 100vh;
-  }
-
-  .lg\:w-\[10rem\] {
-    width: 10rem;
   }
 
   .lg\:w-\[30rem\] {
@@ -1524,6 +1548,10 @@ html {
   .lg\:gap-x-6 {
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
+  }
+
+  .lg\:pb-0 {
+    padding-bottom: 0px;
   }
 
   .lg\:pt-28 {

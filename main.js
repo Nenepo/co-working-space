@@ -9,22 +9,23 @@ const tabsBox = document.querySelector(".tabs-box");
 const tabsBoxButtons = document.querySelectorAll(".tabs-box .tab");
 const arrowIcons = document.querySelectorAll(".icon img");
 
-tabsBoxButtons.forEach(button => {
+  tabsBoxButtons.forEach(button => {
   button.addEventListener("click", () => {
     tabsBoxButtons.forEach(btn => {
       btn.classList.remove("active");
     });
     button.classList.add("active");
   });
-});
+  });
 
-const handleIcons = () => {
+  const handleIcons = () => {
   let scrollVal = Math.round(tabsBox.scrollLeft);
   let maxScrollableWidth = tabsBox.scrollWidth - tabsBox.clientWidth;
   arrowIcons[0].parentElement.style.display = scrollVal > 0 ? "flex" : "none"; 
   arrowIcons[1].parentElement.style.display = maxScrollableWidth > scrollVal ? "flex" : "none";
-};
+  };
 
+   // Event listener for scroll arrows
 arrowIcons.forEach(icon => {
   icon.addEventListener("click", () => {
     tabsBox.scrollLeft += icon.id === "left" ? -350 : 350;
@@ -32,7 +33,15 @@ arrowIcons.forEach(icon => {
   });
 });
 
+// Variables for touch event handling
 let isDragging = false;
+let startX = 0;
+
+// Function to handle touch start event
+const touchStart = (e) => {
+  isDragging = true;
+  startX = e.touches[0].clientX;
+};
 
 const dragging = (e) => {
   if (!isDragging) return;
@@ -41,6 +50,35 @@ const dragging = (e) => {
   handleIcons();
   
 };
+const touchDragging = (e) => {
+  if (!isDragging) return;
+  e.preventDefault(); // Prevent default touch behavior
+  tabsBox.classList.add("dragging");
+  tabsBox.scrollLeft -= e.touches[0].clientX - startX;
+  handleIcons();
+};
+
+
+
+// Function to handle touch move event
+const touchMove = (e) => {
+  if (!isDragging) return;
+  e.preventDefault(); // Prevent default touch behavior
+  tabsBox.classList.add("dragging");
+  tabsBox.scrollLeft -= e.touches[0].clientX - startX;
+  startX = e.touches[0].clientX; // Update start position for next move
+  handleIcons();
+};
+  // Function to handle touch end event
+  const touchEnd = () => {
+    isDragging = false;
+    tabsBox.classList.remove("dragging");
+  };
+
+
+tabsBox.addEventListener("touchstart", touchStart);
+tabsBox.addEventListener("touchmove", touchDragging);
+
 
 const dragStop = () => {
   isDragging = false;
@@ -49,14 +87,18 @@ const dragStop = () => {
 
 tabsBox.addEventListener("mousedown", () => isDragging = true);
 tabsBox.addEventListener("mousemove", dragging);
-tabsBox.addEventListener("touchmove", dragging);
-document.addEventListener("mouseup", dragStop);
-document.addEventListener("touchend", dragStop);
 
+document.addEventListener("mouseup", dragStop);
+
+  // Add touch event listeners to tabs container
+  tabsBox.addEventListener("touchstart", touchStart);
+  tabsBox.addEventListener("touchmove", touchMove);
+  tabsBox.addEventListener("touchend", touchEnd);
 });
 
-// JavaScript
-document.addEventListener('DOMContentLoaded', async function () {
+
+
+document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.getElementById('toggle');
   const arrowUp = document.getElementById('arrowUp');
   const arrowDown = document.getElementById('arrowDown');
@@ -107,8 +149,46 @@ var TrendingSlider = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+
 });
 // Trending Product Slider-end
 
 
+// form validation
+  const bookBtn = document.getElementById("booking")
+  const inputField = document.getElementById("input-field")
+ 
+  const modal = document.getElementById("myModal");
+  const closeModal = document.getElementById("closeModal");
+
+  
+  
+  bookBtn.addEventListener("click" , (e) => {
+    e.preventDefault;
+
+    const inputFieldContent = inputField.value
+    const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+      
+    if (inputFieldContent.match(validRegex)) {
+     
+      modal.classList.remove("hidden"); // Display modal
+      modal.classList.add("flex");
+      
+      closeModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+      });
+      
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
+      
+      document.getElementById("myForm").submit();
+    } else {
+      alert("Invalid email address!");
+    }
+  });
+  
 });

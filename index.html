@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Co-working space</title>
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="./dist/output.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap" rel="stylesheet"> -->
@@ -50,7 +50,7 @@
         </header>
         <main>
           <div
-            class="flex flex-wrap flex-col items-center w-full px-8 mt-10 md:flex-row"
+            class="flex flex-wrap flex-col items-center w-full px-8 mt-10 md:flex-row md:px-20"
           >
             <div class="md:w-1/2 w-full">
               <h1
@@ -63,7 +63,7 @@
             </div>
             <div class="md:w-1/2 w-full">
               <p
-                class="text-textWhite text-base font-source-mono capitalize font-normal lg:-mt-10"
+                class="text-textWhite text-base font-source-mono capitalize font-normal lg:-mt-10 "
               >
                 Discover Your Ideal Workspace Now! Elevate productivity and
                 collaboration with tailored workspaces designed for success.
@@ -306,7 +306,7 @@
         </div>
       </section>
       <!-- slider works -->
-      <section class="bg-black h-screen px-10 md:px-20 lg:h-[110vh]">
+      <section class="bg-black h-full px-10 md:px-20  md:h-[110%] ">
         <h2 class="text-orange text-2xl text-center font-bold pt-10">
           <span class="text-white">Our</span> Work Spaces
         </h2>
@@ -319,7 +319,7 @@
           <div class="icon absolute w-20 flex" style="left: 5px">
             <img
               id="left"
-              src="../img/assets/angle-left-solid.svg"
+              src="./img/assets/angle-left-solid.svg"
               alt="left"
               class="w-8 h-8 p-2 cursor-pointer rounded-full bg-[#d8d5f2]"
             />
@@ -357,18 +357,18 @@
           <div class="icon absolute w-20 right-1 flex justify-end mt-[-40px]">
             <img
               id="right"
-              src="../img/assets/angle-right-solid.svg"
+              src="./img/assets/angle-right-solid.svg"
               alt="right"
               class="w-8 h-8 p-2 cursor-pointer rounded-full bg-[#d8d5f2]"
             />
           </div>
         </div>
-        <div class="flex pt-16 space-x-6">
-          <div>
+        <div class="flex pt-16 space-x-6 md:pb-10 lg:pb-0 ">
+          <div class="w-80">
             <img src="./img/rectangle-1.png" alt="Co-working space" />
           </div>
-          <div><img src="./img/rectangle-2.png" alt="Co-working space" /></div>
-          <div><img src="./img/rectangle-3.png" alt="Co-working space" /></div>
+          <div class="w-80"><img src="./img/rectangle-2.png" alt="Co-working space" /></div>
+          <div class="w-80"><img src="./img/rectangle-3.png" alt="Co-working space" /></div>
         </div>
       </section>
       <section class="h-full bg-off-white md:px-20 lg:h-screen">
@@ -390,13 +390,13 @@
             <div id="toggle" class="pt-1 cursor-pointer">
               <img
                 id="arrowUp"
-                src="../img/assets/angle-right-solid (1).svg"
+                src="./img/assets/angle-right-solid (1).svg"
                 class="w-4 h-4"
                 alt="click to open"
               />
               <img
                 id="arrowDown"
-                src="../img/assets/angle-down-solid.svg"
+                src="./img/assets/angle-down-solid.svg"
                 alt="click to close"
                 class="w-4 h-4 hidden"
               />
@@ -457,24 +457,24 @@
           </div>
         </div>
       </section>
-      <section class="h-[130vh] bg-black lg:h-full">
+      <section class=" bg-black lg:h-full">
         <h2 class="font-bold text-3xl text-center pt-14 text-white">
           What Our Customers Say <br />
           About <span class="text-orange">SpaceSpot</span>
         </h2>
         <!-- carousel -->
         <div class="px-20 pt-10 relative">
-         
+          
            
          
-          <div class="swiper h-[25rem] lg:w-[30rem] mx-auto my-0 ">
+          <div class="swiper h-[25rem] max-w-80 lg:w-[30rem] mx-auto my-0 ">
             <img
             id="left"
             src="../img/assets/angle-left-solid.svg"
             alt="left"
-            class="swiper-button-prev p-2 cursor-pointer rounded-full bg-[#d8d5f2]"
+            class="swiper-button-prev p-2 cursor-pointer rounded-full"
           />
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper ">
               <div
                 class="swiper-slide h-[14rem] w-[18rem] bg-off-white py-8 px-4 rounded-md shadow-lg shadow-black flex  items-center"
               >
@@ -552,7 +552,7 @@
             id="right"
             src="../img/assets/angle-right-solid.svg"
             alt="right"
-            class="swiper-button-next p-2 cursor-pointer rounded-full bg-[#d8d5f2] "
+            class="swiper-button-next p-2 cursor-pointer rounded-full "
           />
           </div>
          
@@ -566,17 +566,32 @@
             Level Up Your Team's Game with the <br />
             <span class="text-orange">Perfect Workspace</span>
           </h2>
-          <div class="flex justify-center pt-6 pb-6">
-            <input
-              class="text-sm bg-ash pl-4 pr-20 py-2 placeholder:text-grey"
+          <form  action="mailto:companyemail" class="flex justify-center pt-6 pb-6">
+            
+            <input id="input-field"
+              class="text-sm text-white bg-ash pl-4 pr-20 py-2 outline-none placeholder:text-white"
               placeholder="Enter your email"
               type="email"
             />
-            <button
-              class="text-[12px] bg-orange px-2 text-white font-semibold opacity-75"
+            <button id="booking" type="submit"
+              class="text-[12px] bg-orange px-2 text-white font-semibold"
             >
               Book Now
             </button>
+          </form>
+        </div>
+        <!-- modal -->
+        <div id="myModal" class="modal fixed w-full h-full top-0 left-0 items-center justify-center hidden">
+          <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+          
+          <div class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+          
+            <div class="modal-content py-4 text-left px-6">
+              <div class="flex justify-between items-center pb-3">
+                <p class="text-2xl font-bold">Form validated successfully!</p>
+                <button id="closeModal" class="modal-close cursor-pointer z-50">&times;</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -593,7 +608,7 @@
               collaboration with tailored workspaces designed for success.
             </p>
           </div>
-          <div class="md:w-1/2 flex justify-between pt-4 md:pt-0">
+          <div class=" flex justify-between pt-4 space-x-4 md:pt-0 md:w-1/2">
             <div>
               <h6 class="text-orange font-semibold">Information</h6>
               <ul class="text-[12px] flex flex-col space-y-4 pt-4">
