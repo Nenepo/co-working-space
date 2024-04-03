@@ -6,3 +6,9 @@ The co-working space is a landing page where people have access to checking for 
 ## Acknowledgements
 
  - The_Mauteen for giving me his design to code out
+
+
+## Language and styling 
+- Html
+- Tailwind Css
+- Swiper js
