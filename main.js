@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // Trending Product Slider-start
-var TrendingSlider = new Swiper('.swiper', {
+const TrendingSlider = new Swiper('.swiper', {
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
@@ -153,6 +153,25 @@ var TrendingSlider = new Swiper('.swiper', {
 });
 // Trending Product Slider-end
 
+const ImageSlider = new Swiper('.swiper-container', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2.5,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  }
+
+});
+// Trending image Slider-end
 
 // form validation
   const bookBtn = document.getElementById("booking")
